@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_GameLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Games</h2>
+
+<div class="jumbotron">
+    <h1>Overview of my project</h1>
+</div>
+
+@if (User.Identity.IsAuthenticated)
+{
+<div class="row">
+
+        <h2>Recorder</h2>
+        @Html.ActionLink("Recorder", "Index", "Game")
+   
+
+        <h2>Memory Game</h2>
+        <p></p>
+        @Html.ActionLink("Memory Game", "Index", "Game1")
+ 
+
+        <h2>Memory Game</h2>
+        <p></p>
+        @Html.ActionLink("Memory Game", "Index", "Game2")
+  
+
+        <h2>Flash Cards</h2>
+        <p></p>
+        @Html.ActionLink("Flash Cards", "Index", "Game3")
+
+</div>
+}

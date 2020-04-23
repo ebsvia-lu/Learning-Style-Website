@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DB5F2ED-B32D-4DC6-BBC8-178E14EE056C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FullCalendar.MVC5</RootNamespace>
+    <AssemblyName>FullCalendar.MVC5</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\FullCalendar.MVC5.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\FullCalendar\Abstract\ControlsContainer.cs">
+      <Link>Abstract\ControlsContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Abstract\PropertyParserFactory.cs">
+      <Link>Abstract\PropertyParserFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\BusinessHour.cs">
+      <Link>Entities\BusinessHour.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\ButtonText.cs">
+      <Link>Entities\ButtonText.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\CustomButton.cs">
+      <Link>Entities\CustomButton.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\DayNames.cs">
+      <Link>Entities\DayNames.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\Duration.cs">
+      <Link>Entities\Duration.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\Event.cs">
+      <Link>Entities\Event.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\EventCollection.cs">
+      <Link>Entities\EventCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\EventConstraint.cs">
+      <Link>Entities\EventConstraint.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\EventSource.cs">
+      <Link>Entities\EventSource.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\Footer.cs">
+      <Link>Entities\Footer.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\Header.cs">
+      <Link>Entities\Header.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\MonthNames.cs">
+      <Link>Entities\MonthNames.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\SelectConstraint.cs">
+      <Link>Entities\SelectConstraint.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\Unit.cs">
+      <Link>Entities\Unit.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\ValidRange.cs">
+      <Link>Entities\ValidRange.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\View.cs">
+      <Link>Entities\View.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Entities\VisibleRange.cs">
+      <Link>Entities\VisibleRange.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\AvailableView.cs">
+      <Link>Enums\AvailableView.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\DateAlignment.cs">
+      <Link>Enums\DateAlignment.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\EventCollectionType.cs">
+      <Link>Enums\EventCollectionType.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\GenericView.cs">
+      <Link>Enums\GenericView.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\HeaderButton.cs">
+      <Link>Enums\HeaderButton.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\HeaderSeparator.cs">
+      <Link>Enums\HeaderSeparator.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\Rendering.cs">
+      <Link>Enums\Rendering.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\ThemeSystem.cs">
+      <Link>Enums\ThemeSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Enums\UnitType.cs">
+      <Link>Enums\UnitType.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Extensions\ColorExtensions.cs">
+      <Link>Extensions\ColorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Extensions\StringExtensions.cs">
+      <Link>Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\FullCalendarHelper.cs">
+      <Link>FullCalendarHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\FullCalendarParameters.cs">
+      <Link>FullCalendarParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\ClientSideEvents.cs">
+      <Link>Infrastructure\ClientSideEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\ControlsBuilder.cs">
+      <Link>Infrastructure\ControlsBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\Events.cs">
+      <Link>Infrastructure\Events.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ArrayPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ArrayPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\BoolPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\BoolPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\BusinessHoursPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\BusinessHoursPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ButtonIconsPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ButtonIconsPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ClientSideEventsPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ColorPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ColorPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\CustomButtonsPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\CustomButtonsPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\CustomViewPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\CustomViewPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\DateTimePropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\DateTimePropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\DayOfWeekPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\DayOfWeekPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\DoublePropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\DoublePropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EnumPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\EnumPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EventCollectionPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\EventCollectionPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\EventSourcesPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\EventSourcesPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\FloatPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\FloatPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\FunctionPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\FunctionPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\IntegerPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\IntegerPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ObjectPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ObjectPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\StringPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\StringPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\ThemeSystemPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\ThemeSystemPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\TimeSpanPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Infrastructure\PropertyParsers\UnitPropertyParser.cs">
+      <Link>Infrastructure\PropertyParsers\UnitPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Interfaces\IPropertyParser.cs">
+      <Link>Interfaces\IPropertyParser.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Interfaces\ISerializableObject.cs">
+      <Link>Interfaces\ISerializableObject.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\NullPropertiesConverter.cs">
+      <Link>Serialization\NullPropertiesConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableBusinessHour.cs">
+      <Link>Serialization\SerializableObjects\SerializableBusinessHour.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableDuration.cs">
+      <Link>Serialization\SerializableObjects\SerializableDuration.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableEvent.cs">
+      <Link>Serialization\SerializableObjects\SerializableEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableEventSource.cs">
+      <Link>Serialization\SerializableObjects\SerializableEventSource.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableValidRange.cs">
+      <Link>Serialization\SerializableObjects\SerializableValidRange.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializableObjects\SerializableView.cs">
+      <Link>Serialization\SerializableObjects\SerializableView.cs</Link>
+    </Compile>
+    <Compile Include="..\FullCalendar\Serialization\SerializationHelpers.cs">
+      <Link>Serialization\SerializationHelpers.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\FullCalendar\Scripts\fullcalendar.helper.js">
+      <Link>Scripts\fullcalendar.helper.js</Link>
+    </Content>
+    <Content Include="..\FullCalendar\Scripts\fullcalendar.helper.min.js">
+      <Link>Scripts\fullcalendar.helper.min.js</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

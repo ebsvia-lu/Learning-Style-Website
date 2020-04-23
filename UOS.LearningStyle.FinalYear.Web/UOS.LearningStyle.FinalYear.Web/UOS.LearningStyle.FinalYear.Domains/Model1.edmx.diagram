@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bf8704cac10b47dda5b8af20c17691dc" Name="Diagram1">
+        <EntityTypeShape EntityType="LearningStyleDBModel.AppointmentDiary" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearningStyleDBModel.AspNetRole" Width="1.5" PointX="0.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearningStyleDBModel.AspNetUserClaim" Width="2" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearningStyleDBModel.AspNetUserLogin" Width="2" PointX="5.625" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearningStyleDBModel.AspNetUser" Width="2.25" PointX="2.625" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearningStyleDBModel.CourseGrade" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LearningStyleDBModel.sysdiagram" Width="2.625" PointX="5.125" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="LearningStyleDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="LearningStyleDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="LearningStyleDBModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

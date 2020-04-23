@@ -1,0 +1,20 @@
+﻿@using FullCalendar;
+
+@Html.FullCalendar(settings =>
+{
+    settings.Name = "calendar";
+    settings.CssClass = "css-test";
+    settings.Header = new Header
+    {
+        Left = new ControlsBuilder().AddButton(HeaderButton.Prev).AddSeparator(HeaderSeparator.Adjacent)
+                    .AddButton(HeaderButton.Next).AddSeparator(HeaderSeparator.Gap).AddButton(HeaderButton.Today),
+        Center = new ControlsBuilder().AddTitle(),
+        Right = new ControlsBuilder("month,agendaWeek ").AddView(AvailableView.AgendaDay)
+    };
+    settings.DefaultView = AvailableView.AgendaDay.ToString();
+    settings.Editable = true;
+    settings.AllDaySlot = false;
+    settings.Selectable = true;
+    settings.SlotDuration = TimeSpan.FromMinutes(15);
+    settings.Events = Events.AsJsonFeed(Url.Action("GetDiaryEvents", "Event"));
+})

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_GameLayout.cshtml";
+ 
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" type="text/css" href="css/Visuals/memorygame2/MemoryGame.css">
+</head>
+<body>
+    <h1>Memory Game</h1>
+    <p id="game-info">&nbsp;</p>
+    <a href=Visuals.html><button>Back to Revision</button></a>
+    <ul id="levels">
+        <li class="selected"><a href="javascript:" level="0">1</a></li>
+        <li><a href="javascript:" level="1">2</a></li>
+        <li><a href="javascript:" level="2">3</a></li>
+        <li><a href="javascript:" level="3">4</a></li>
+        <li><a href="javascript:" level="4">5</a></li>
+        <li><a href="javascript:" level="5">6</a></li>
+        <li><a href="javascript:" level="6">7</a></li>
+        <li><a href="javascript:" level="7">8</a></li>
+        <li><a href="javascript:" level="8">9</a></li>
+        <li><a href="javascript:" level="9">10</a></li>
+    </ul>
+
+    <div id="playfield-wrapper">&nbsp;<div class="win-text">Win</div></div>
+<script>
+"use strict";
+var evt = new Event(),
+    game = new MemoryGame(evt);
+            </script>
+        
+</body>
+</html>
+
