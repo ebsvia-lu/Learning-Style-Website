@@ -5,11 +5,11 @@
             if (!n[s]) {
                 if (!t[s]) {
                     var i = "function" == typeof require && require;
-                    if (!l && i) return i(s, !0);
-                    if (r) return r(s, !0);
+                   if (!l && i) return i(s, !0);
+                   if (r) return r(s, !0);
                     var u = new Error("Cannot find module '" + s + "'");
                     throw u.code = "MODULE_NOT_FOUND", u
-                }
+              }
                 var c = n[s] = { exports: {} };
                 t[s][0].call(c.exports, function (e) {
                     var n = t[s][1][e];
@@ -38,7 +38,7 @@
                 }
 
                 var a = arguments[0];
-                if ((0, d.addClass)(t.body, "stop-scrolling"), (0, p.resetInput)(), a === n) return (0, f.logStr)("SweetAlert expects at least 1 attribute!"), !1;
+                if ((0, d.addClass)(t.body, "stop-scrolling"), (0, p.resetInput)(), a === n) return (0, f.logStr)("Invalid"), !1;
                 var r = (0, f.extend)({}, y.default);
                 switch (typeof a) {
                     case "string":
