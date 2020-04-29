@@ -1,8 +1,8 @@
 ﻿:root {
-    --mainWhite: #f5f5f5;
-    --mainDark: #333333;
-    --mainOrange: #ff8552;
-    --mainGreen: #297373;
+    --mainWhite: white;
+    --mainDark: black;
+    --colour: orange;
+    --colour2: navy;
 }
 
 body {
@@ -10,22 +10,23 @@ body {
     color: var(--mainDark);
 }
 
-.show-btn {
-    border-color: var(--mainOrange);
-    color: var(--mainOrange);
+.button {
+    border-color: var(--colour);
+    color: var(--colour);
     background: transparent;
 }
 
-    .show-btn:hover {
-        background: var(--mainOrange);
+    .button:hover {
+        background: var(--colour);
         color: var(--mainDark);
     }
 
 .question-card {
     display: none;
+    bottom: 40%;
     position: relative;
     background: transparent;
-    border-color: var(--mainOrange);
+    border-color: var(--colour);
 }
 
 .feedback {
@@ -33,53 +34,53 @@ body {
 }
 
 textarea {
-    border-radius: 0.25rem;
-    border-color: var(--mainOrange);
+    border-radius: 0.75rem;
+    border-color: var(--colour);
 }
 
 .close-btn {
     position: absolute;
-    top: 0;
-    right: 2%;
+    top: 70px;
+    right: 40%;
     font-size: 2rem;
-    color: var(--mainOrange);
+    color: var(--colour);
     cursor: pointer;
 }
 
     .close-btn:hover {
-        color: var(--mainGreen);
+        color: var(--colour2);
     }
 
 .submitBtn {
-    border: 0.2rem solid var(--mainGreen);
-    color: var(--mainGreen);
+    border: 0.2em solid var(--colour2);
+    color: var(--colour2);
     background: transparent;
 }
 
     .submitBtn:hover {
-        background: var(--mainGreen);
+        background: var(--colour2);
         color: var(--mainWhite);
     }
 
 .edit-flashcard {
-    border: 0.2rem solid var(--mainGreen);
-    color: var(--mainGreen);
+    border: 0.2rem solid var(--colour2);
+    color: var(--colour2);
     background: transparent;
 }
 
     .edit-flashcard:hover {
-        background: var(--mainGreen);
+        background: var(--colour2);
         color: var(--mainDark);
     }
 
 .delete-flashcard {
-    border: 0.2rem solid var(--mainOrange);
-    color: var(--mainOrange);
+    border: 0.2rem solid var(--colour);
+    color: var(--colour);
     background: transparent;
 }
 
     .delete-flashcard:hover {
-        background: var(--mainOrange);
+        background: var(--colour);
         color: var(--mainDark);
     }
 

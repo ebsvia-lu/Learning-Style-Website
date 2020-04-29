@@ -13,7 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOS.LearningStyle.FinalYear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOS.LearningStyle.FinalYear.Domains", "UOS.LearningStyle.FinalYear.Domains\UOS.LearningStyle.FinalYear.Domains.csproj", "{F8F6E5FC-30B9-4E72-9B8A-4888CA7C8108}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOS.LearningStyle.FinalYear.Tests", "UOS.LearningStyle.FinalYear.Tests\UOS.LearningStyle.FinalYear.Tests.csproj", "{E97BA4E0-65E0-4CEE-A1AB-533B7E64CD76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOS.LearningStyle.FinalYear.Tests", "UOS.LearningStyle.FinalYear.Tests\UOS.LearningStyle.FinalYear.Tests.csproj", "{3FDF7BA2-3448-47FB-8319-D67B558FE745}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionsItems", "SolutionsItems", "{5FBBCB11-AF47-4F60-89E2-02887EB2670A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Users\ebese\Downloads\Database.sql = ..\..\..\Users\ebese\Downloads\Database.sql
+		..\..\..\Users\ebese\Downloads\LearningStyleDB_Data.sql = ..\..\..\Users\ebese\Downloads\LearningStyleDB_Data.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +47,10 @@ Global
 		{F8F6E5FC-30B9-4E72-9B8A-4888CA7C8108}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8F6E5FC-30B9-4E72-9B8A-4888CA7C8108}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8F6E5FC-30B9-4E72-9B8A-4888CA7C8108}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E97BA4E0-65E0-4CEE-A1AB-533B7E64CD76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E97BA4E0-65E0-4CEE-A1AB-533B7E64CD76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E97BA4E0-65E0-4CEE-A1AB-533B7E64CD76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E97BA4E0-65E0-4CEE-A1AB-533B7E64CD76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FDF7BA2-3448-47FB-8319-D67B558FE745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FDF7BA2-3448-47FB-8319-D67B558FE745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FDF7BA2-3448-47FB-8319-D67B558FE745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FDF7BA2-3448-47FB-8319-D67B558FE745}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,6 +8,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Mvc;
 using UOS.LearningStyle.FinalYear.Business.Abstractions;
 using UOS.LearningStyle.FinalYear.Domains;
 using UOS.LearningStyle.FinalYear.Web.Controllers;
@@ -18,15 +19,19 @@ namespace UOS.LearningStyle.FinalYear.Tests.Presentations
     public class EventControllerTest
     {
         Mock<IAppointmentDiaryService> mockedAppointmentDiaryService;
+        Mock<AppointmentDiary> mockedAppointmentDiary;
         EventController eventController;
-        AppointmentDiary sampleData = new AppointmentDiary { DateTimeScheduled = DateTime.Parse("2020-04-01") };
+        AppointmentDiary sampleData = new AppointmentDiary { DateTimeScheduled = DateTime.Parse("01/03/2020") };
 
         [TestInitialize]
         public void Setup()
         {
             mockedAppointmentDiaryService = new Mock<IAppointmentDiaryService>();
+            mockedAppointmentDiary = new Mock<AppointmentDiary>();
 
-            mockedAppointmentDiaryService.Setup(a => a.AddAppointmentDiary(It.IsAny<AppointmentDiary>()));
+            //mockedAppointmentDiary.SetupGet(x => x.DateTimeScheduled).Returns(DateTime.Parse("2020-03-10"));
+
+            mockedAppointmentDiaryService.Setup(a => a.AddAppointmentDiary(mockedAppointmentDiary.Object));
 
             mockedAppointmentDiaryService.Setup(a => a.RetrieveAppointmentDiaries(It.IsAny<string>())).Returns(It.IsAny<List<AppointmentDiary>>);
                                            
@@ -64,40 +69,38 @@ namespace UOS.LearningStyle.FinalYear.Tests.Presentations
             eventController.ControllerContext = controllerContextMock.Object;
         }
 
-        [Ignore]
         [TestMethod]
         public void GivenIHaveAppointmentDiaryToCreateItShouldSave()
         {
-            eventController.Create(sampleData, "12:00");
+            eventController.Create(sampleData, "12:00 AM");
 
             mockedAppointmentDiaryService.Verify(a => a.AddAppointmentDiary(sampleData));
         }
 
-        [Ignore]
         [TestMethod]
         public void GivenIHaveAppointmentDiaryToDeleteItShouldRemoveFromDatabase()
         {
-            eventController.DeleteConfirmed(1);
-
-            mockedAppointmentDiaryService.Verify(a => a.RemoveAppointmentDiary(sampleData));
+            var result = (RedirectToRouteResult)eventController.DeleteConfirmed(1);
+            
+            Assert.AreEqual("Index", result.RouteValues["action"]);
+            Assert.IsNull(result.RouteValues["controller"]);
         }
 
-        [Ignore]
         [TestMethod]
         public void GivenIHaveAppointmentDiaryToUpdateItShouldSave()
         {
-            eventController.Edit(sampleData, "12:00");
+            var result = (RedirectToRouteResult)eventController.Edit(sampleData, "12:00 AM");
 
-            mockedAppointmentDiaryService.Verify(a => a.UpdateAppointmentDiary(sampleData));
+            Assert.AreEqual("Index", result.RouteValues["action"]);
+            Assert.IsNull(result.RouteValues["controller"]);
         }
 
-        [Ignore]
         [TestMethod]
         public void GivenIHaveAppointmentDiaryToGetItShouldRetrieve()
         {
-            eventController.GetDiaryEvents(DateTime.Now, DateTime.UtcNow);
+            var result = eventController.GetDiaryEvents(DateTime.Now, DateTime.UtcNow);
 
-            mockedAppointmentDiaryService.Verify(a => a.RetrieveAppointmentDiaries("testuser"));
+            Assert.IsNotNull(result);
         }
     }
 }

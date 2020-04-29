@@ -8,6 +8,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Mvc;
 using UOS.LearningStyle.FinalYear.Business.Abstractions;
 using UOS.LearningStyle.FinalYear.Domains;
 using UOS.LearningStyle.FinalYear.Web.Controllers;
@@ -77,13 +78,13 @@ namespace UOS.LearningStyle.FinalYear.Tests.Presentations
             mockedCourseGradeService.Verify(c => c.AddCourseGrade(sampleData));
         }
 
-        [Ignore]
         [TestMethod]
         public void GivenIHaveCourseGradeToDeleteItShouldRemoveFromDatabase()
         {
-            courseGradeController.DeleteConfirmed(1);
+            var result = (RedirectToRouteResult)courseGradeController.DeleteConfirmed(1);
 
-            mockedCourseGradeService.Verify(c => c.RemoveCourseGrade(sampleData));
+            Assert.AreEqual("Index", result.RouteValues["action"]);
+            Assert.IsNull(result.RouteValues["controller"]);
         }
 
         [TestMethod]
@@ -92,15 +93,6 @@ namespace UOS.LearningStyle.FinalYear.Tests.Presentations
             courseGradeController.Edit(sampleData);
 
             mockedCourseGradeService.Verify(c => c.UpdateCourseGrade(sampleData));
-        }
-
-        [Ignore]
-        [TestMethod]
-        public void GivenIHaveCourseGradeToGetItShouldRetrieve()
-        {
-            courseGradeController.Index();
-
-            mockedCourseGradeService.Verify(c => c.RetrieveCourseGrades("testuser"));
         }
     }
 }
