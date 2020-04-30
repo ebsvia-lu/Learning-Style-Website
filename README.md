@@ -8,7 +8,7 @@ The features are:
 
 2 Calculate your marks - This will involve students inputting their modules information e.g. assignments, tests, exams, coursework etc and its percentage so they can automatically see if they are on task to achieve their desired grade. There will also be tips to help students see before hand what mark they need to achieve in an upcoming test for example.
 
-3 Games - Here the users can play games that will aid their learning, for visual learners they will play memory games, create flash cards and record themselves.
+3 Games - Here the users can play games that will aid their learning, for visual learners they will play memory games, create flash cards and audio record themselves.
 
 ## Getting Started (Software Based)
 To run my project you need to install Visual Studio 2017
