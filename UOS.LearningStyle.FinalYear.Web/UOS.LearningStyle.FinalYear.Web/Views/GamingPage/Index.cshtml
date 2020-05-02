@@ -1,14 +1,13 @@
 ﻿
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_GameLayout.cshtml";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Games</h2>
 
 <div class="jumbotron">
-    <h1>Overview of my project</h1>
+    <h1>Learning Games</h1>
 </div>
 
 @if (User.Identity.IsAuthenticated)
@@ -17,7 +16,6 @@
 
         <h2>Recorder</h2>
         @Html.ActionLink("Recorder", "Index", "Game")
-   
 
         <h2>Memory Game</h2>
         <p></p>

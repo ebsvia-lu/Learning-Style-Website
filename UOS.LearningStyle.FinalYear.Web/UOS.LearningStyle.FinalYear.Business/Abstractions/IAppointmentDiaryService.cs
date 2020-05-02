@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UOS.LearningStyle.FinalYear.Domains;
 
 namespace UOS.LearningStyle.FinalYear.Business.Abstractions
-{
+{//Appointment dairy interface for the calendar
     public interface IAppointmentDiaryService
     {
         void AddAppointmentDiary(AppointmentDiary appointmentDiary);

@@ -92,15 +92,6 @@ body {
     display: none;
 }
 
-.music_control {
-    float: left;
-    position: fixed;
-    margin-left: 5px;
-}
-
-    .music_control:hover {
-        cursor: pointer;
-    }
 
 .swal-wide {
     top: 25% !important;
@@ -229,21 +220,6 @@ body {
     text-align: center;
     font-size: 40px;
     font-weight: 300;
-}
-
-.hint_table {
-    margin: auto;
-    text-align: center;
-    font-size: 37px;
-    margin-bottom: 15px;
-}
-
-.help_image {
-    text-align: center;
-    margin: auto;
-    padding: auto;
-    width: 550px;
-    height: 700px;
 }
 
 #submit_button {

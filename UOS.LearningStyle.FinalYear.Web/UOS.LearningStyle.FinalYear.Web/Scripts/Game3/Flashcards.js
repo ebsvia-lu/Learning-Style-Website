@@ -1,4 +1,5 @@
-﻿(function (global, factory) {
+﻿//Some code changes made with the help of Stack Overflow
+(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
         typeof define === 'function' && define.amd ? define(['exports'], factory) :
             (factory((global.pell = {})));
@@ -30,120 +31,7 @@
         return document.execCommand(command, false, value);
     };
 
-    var defaultActions = {
-        bold: {
-            icon: '<b>B</b>',
-            title: 'Bold',
-            state: function state() {
-                return queryCommandState('bold');
-            },
-            result: function result() {
-                return exec('bold');
-            }
-        },
-        italic: {
-            icon: '<i>I</i>',
-            title: 'Italic',
-            state: function state() {
-                return queryCommandState('italic');
-            },
-            result: function result() {
-                return exec('italic');
-            }
-        },
-        underline: {
-            icon: '<u>U</u>',
-            title: 'Underline',
-            state: function state() {
-                return queryCommandState('underline');
-            },
-            result: function result() {
-                return exec('underline');
-            }
-        },
-        strikethrough: {
-            icon: '<strike>S</strike>',
-            title: 'Strike-through',
-            state: function state() {
-                return queryCommandState('strikeThrough');
-            },
-            result: function result() {
-                return exec('strikeThrough');
-            }
-        },
-        heading1: {
-            icon: '<b>H<sub>1</sub></b>',
-            title: 'Heading 1',
-            result: function result() {
-                return exec(formatBlock, '<h1>');
-            }
-        },
-        heading2: {
-            icon: '<b>H<sub>2</sub></b>',
-            title: 'Heading 2',
-            result: function result() {
-                return exec(formatBlock, '<h2>');
-            }
-        },
-        paragraph: {
-            icon: '&#182;',
-            title: 'Paragraph',
-            result: function result() {
-                return exec(formatBlock, '<p>');
-            }
-        },
-        quote: {
-            icon: '&#8220; &#8221;',
-            title: 'Quote',
-            result: function result() {
-                return exec(formatBlock, '<blockquote>');
-            }
-        },
-        olist: {
-            icon: '&#35;',
-            title: 'Ordered List',
-            result: function result() {
-                return exec('insertOrderedList');
-            }
-        },
-        ulist: {
-            icon: '&#8226;',
-            title: 'Unordered List',
-            result: function result() {
-                return exec('insertUnorderedList');
-            }
-        },
-        code: {
-            icon: '&lt;/&gt;',
-            title: 'Code',
-            result: function result() {
-                return exec(formatBlock, '<pre>');
-            }
-        },
-        line: {
-            icon: '&#8213;',
-            title: 'Horizontal Line',
-            result: function result() {
-                return exec('insertHorizontalRule');
-            }
-        },
-        link: {
-            icon: '&#128279;',
-            title: 'Link',
-            result: function result() {
-                var url = window.prompt('Enter the link URL');
-                if (url) exec('createLink', url);
-            }
-        },
-        image: {
-            icon: '&#128247;',
-            title: 'Image',
-            result: function result() {
-                var url = window.prompt('Enter the image URL');
-                if (url) exec('insertImage', url);
-            }
-        }
-    };
+ 
 
     var defaultClasses = {
         actionbar: 'pell-actionbar',
@@ -312,7 +200,7 @@ function eventListeners() {
 
     })
 }
-// ui constructor
+
 function UI() { }
 //show question card
 UI.prototype.showQuestion = function (element) {

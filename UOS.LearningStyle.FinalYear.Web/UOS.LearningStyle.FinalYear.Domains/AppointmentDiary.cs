@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace UOS.LearningStyle.FinalYear.Domains
-{
+{//Domain objects
     public class AppointmentDiary
     {
         public int ID { get; set; }

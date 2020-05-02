@@ -4,20 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My Learning Style Application</title>
- 
-    @Styles.Render("~/Contents/css")
 
-    @Scripts.Render("~/bundless/scripts")
-    
+    @Styles.Render("~/Contentss/css")
+
+    @Scripts.Render("~/bundlesss/scripts")
+  
 </head>
 <body>
    
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-               
-                    <li>@Html.ActionLink("Return back to Game Page", "Index", "GamingPage")</li>
-                   
+              
+                    <li>@Html.ActionLink("Return to Game Page", "Index", "GamingPage")</li>
+
+
+                  
                 </ul>
                
+            </div>
+     
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -26,6 +31,5 @@
         </footer>
     </div>
 
-   
 </body>
 </html>

@@ -19,8 +19,7 @@ var tickAwsome = '<i class="fa fa-check fa-3x" aria-hidden="true" style="color:w
 var starAwsome = '<i class="fa fa-star fa-3x" aria-hidden="true" style="color:white"></i>'
 var timesAwsome = '<i class="fa fa-times fa-3x" aria-hidden="true" style="color:white"></i>'
 var trophyAwsome = '<i class="fa fa-trophy fa-3x" aria-hidden="true" style="color:white"></i>'
-var soundOn = '<i class="fa fa-volume-up fa-3x" aria-hidden="true" ></i>';
-var soundOff = '<i class="fa fa-volume-off fa-3x" aria-hidden="true"></i>'
+
 var speed = 2500;
 var speedStep = 400;
 var speedDefault = 2500;
@@ -40,24 +39,11 @@ var startTime = null;
 var endTime = null;
 var gameTime = "00:00:00";;
 var bestGameTime = "00:00:00";
-var musicList = ["files/bensound-acousticbreeze.mp3", "files/bensound-adaytoremember.mp3", "files/bensound-smile.mp3", "files/bensound-sunny.mp3", "files/bensound-ukulele.mp3"];
-var musicRandom = Math.floor(Math.random() * musicList.length);
-var audio = new Audio(musicList[musicRandom]);
+
 var playStatus = false;
 var newRecordNotif = "";
 
 
-audio.onended = function () {
-    musicTemp.push(musicList.splice(musicRandom, 1));
-    musicRandom = Math.floor(Math.random() * musicList.length);
-    audio.src = musicList[musicRandom];
-    audio.load();
-    if (musicList.length == 1) {
-        musicList.push.apply(musicList, musicTemp);
-        musicTemp = [];
-    }
-    audio.play();
-};
 
 if (hr >= 19 || hr < 6) {
     tickAwsome = '<i class="fa fa-check fa-3x" aria-hidden="true" style="color:black"></i>';
@@ -69,34 +55,22 @@ if (hr >= 19 || hr < 6) {
 
 }
 
-function audioControl() {
-    if (playStatus == true) {
-        audio.pause();
-        playStatus = false;
-        document.getElementById("sound_on_off").innerHTML = soundOff;
-    }
-    else {
-        audio.play();
-        playStatus = true;
-        document.getElementById("sound_on_off").innerHTML = soundOn;
-    }
-}
 
 function localSave(s, c, t) {
     if (typeof (Storage) !== "undefined") {
-        localStorage.setItem("mnimi_score", s);
-        localStorage.setItem("mnimi_game", c);
-        localStorage.setItem("mnimi_time", t);
+        localStorage.setItem("score", s);
+        localStorage.setItem("memgame", c);
+        localStorage.setItem("memtime", t);
     }
 
 }
 
 function localLoad() {
     if (typeof (Storage) !== "undefined") {
-        gameCounter = parseInt(localStorage.getItem("mnimi_game"));
+        gameCounter = parseInt(localStorage.getItem("memgame"));
         if (gameCounter) {
-            bestScore = parseInt(localStorage.getItem("mnimi_score"));
-            bestGameTime = localStorage.getItem("mnimi_time");
+            bestScore = parseInt(localStorage.getItem("score"));
+            bestGameTime = localStorage.getItem("memtime");
             if (bestGameTime == null) {
                 bestGameTime = "00:00:00";
             }
@@ -118,48 +92,7 @@ function localLoad() {
 
 
 }
-function redirect(flag) {
-    switch (flag) {
-        case 1:
-            window.open("https://github.com/sepandhaghighi/mnimi");
-            break;
-        case 2:
-            swal({
-                title: "Bitocin Wallet",
-                text: "1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA",
-                customClass: 'swal-bitcoin'
-            });
-            break;
-        case 3:
-            window.open("mailto:info@mnimi.ir");
-            break;
-        case 4:
-            window.open("https://www.payping.ir/sepandhaghighi");
-            break;
-        case 5:
-            window.open("help.html", "_self")
-            break;
-        case 6:
-            window.open("donate.html", "_self")
-            break;
-        case 7:
-            window.open("memory.html", "_self")
-            break;
-        default:
-            window.open("");
 
-    }
-
-}
-
-function swalHelp() {
-    swal({
-        title: "Hi",
-        text: '<p style="text-align:justify">Memory game - Warm up!</p>',
-        html: true,
-        customClass: "swal-wide"
-    });
-}
 
 function begin() {
     tableStyle(mode = false);
@@ -214,7 +147,7 @@ function selectItems() {
         selectedItem.push(item);
     }
 }
-
+//Taken from Stack Overflow
 function sequence(i) {
     var item;
     item = selectedItem[i];
@@ -238,7 +171,7 @@ function simulation() {
 function mutation(mode = true) {
     if (mode == true) {
         var table, row, col1, col2
-        table = document.getElementById("mnimi");
+        table = document.getElementById("mems");
         blockNumber = blockNumber + 2;
         row = table.insertRow(1);
         if (mutationFlag2 == false) {
@@ -327,7 +260,7 @@ function gameOver() {
         text: newRecordNotif + '<table align="center" style="font-size:26px;"><tr><td style="padding:20px;">Score</td><td style="padding:20px;">' + score.toString() + '</tr><tr><td>Time</td><td style="padding:20px;">' + gameTime.toString() + '</td></tr></table>',
         html: true,
         customClass: "swal-score",
-        imageUrl: "images/gameover.png"
+       
     });
     if (bestScore > 0) {
         document.getElementById("score_button").innerHTML = "SCORE(" + bestScore.toString() + ")";
@@ -341,7 +274,7 @@ function startButtonUpdate(i) {
     var button;
     button = document.getElementById("start");
     if (i != null) {
-        button.innerHTML = "Level " + i.toString();
+        button.innerHTML = "You're on Level " + i.toString();
     }
     else {
         button.innerHTML = "Start";
@@ -431,7 +364,7 @@ function tableStyle(mode = true) {
 
 function levelShow() {
     var i;
-    var message = "Level " + level.toString();
+    var message = "You're on Level " + level.toString();
     if (level == 1) {
         startTime = new Date();
         message = "Start";
@@ -498,5 +431,4 @@ function restartGame() {
     init();
 }
 
-shortcut.add("q", function () { swalHelp(); });
 shortcut.add("r", function () { restartGame(); });

@@ -20,14 +20,14 @@
         this.render();
 
     }
-
+    //used queries as adviced from Gla and used jQuery Library
     App.fn = App.prototype;
 
     App.fn.addEventListeners = function () {
 
         $.on(this.$insert, 'keypress', this.onInsert.bind(this));
 
-        $.on(this.$toggleAll, 'click', this.onToggleAll.bind(this));
+        $.on(this.$toggleAll, 'click', this.moveall.bind(this));
         $.delegate(this.$list, '.toggle', 'click', this.onToggle.bind(this));
 
         $.delegate(this.$list, '.destroy', 'click', this.onDestroy.bind(this));
@@ -37,13 +37,13 @@
 
         $.delegate(this.$filters, '.button', 'click', this.onFilter.bind(this));
 
-        $.delegate(this.$list, 'span', 'dblclick', this.onStartEditing.bind(this));
-        $.delegate(this.$list, '.edit', 'keyup', this.onEditingCancel.bind(this));
+        $.delegate(this.$list, 'span', 'dblclick', this.onStartTheEditing.bind(this));
+        $.delegate(this.$list, '.edit', 'keyup', this.onediting.bind(this));
         $.delegate(this.$list, '.edit', 'keypress', this.onEditingDone.bind(this));
         $.delegate(this.$list, '.edit', 'blur', this.onEditingLeave.bind(this));
     };
 
-    App.fn.onStartEditing = function (event) {
+    App.fn.onStartTheEditing = function (event) {
         var li = $.parent(event.target, 'li');
         var element = $('.edit', li);
         this.currentId = parseInt(li.dataset.id, 10);
@@ -52,9 +52,9 @@
         element.focus();
     };
 
-    App.fn.onEditingCancel = function (event) {
+    App.fn.onediting = function (event) {
         if (event.keyCode === ESC_KEY) {
-            console.log('onEditingCancel', event.target);
+            console.log('onediting', event.target);
             event.target.dataset.isCanceled = true;
             event.target.blur();
         }
@@ -113,7 +113,7 @@
         }
     };
 
-    App.fn.onToggleAll = function (event) {
+    App.fn.moveall = function (event) {
         var checked = event.target.checked;
         var self = this;
 
@@ -291,7 +291,7 @@
         span.appendChild(document.createTextNode(item.text));
 
         destroy.className = 'destroy';
-        // destroy.appendChild( document.createTextNode('X') );
+
 
         edit.setAttribute('type', 'text');
         edit.className = 'edit';

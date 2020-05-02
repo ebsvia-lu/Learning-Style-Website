@@ -7,81 +7,67 @@
 
 body {
     background: var(--mainWhite);
-    color: var(--mainDark);
+   
 }
 
 .button {
-    border-color: var(--colour);
-    color: var(--colour);
+    border-color: orange;
+    color: orange;
     background: transparent;
 }
 
     .button:hover {
-        background: var(--colour);
-        color: var(--mainDark);
+        background: orange;
+        color: black;
     }
 
-.question-card {
+.createflashcard {
     display: none;
-    bottom: 40%;
-    position: relative;
+    top: 25px;
     background: transparent;
-    border-color: var(--colour);
+    border-color: orange;
 }
 
-.feedback {
-    display: none;
-}
+
 
 textarea {
     border-radius: 0.75rem;
-    border-color: var(--colour);
+    border-color: orange;
 }
 
-.close-btn {
-    position: absolute;
-    top: 70px;
-    right: 40%;
-    font-size: 2rem;
-    color: var(--colour);
-    cursor: pointer;
-}
 
-    .close-btn:hover {
-        color: var(--colour2);
-    }
 
 .submitBtn {
     border: 0.2em solid var(--colour2);
-    color: var(--colour2);
+    color: navy;
     background: transparent;
 }
 
     .submitBtn:hover {
-        background: var(--colour2);
+        background: navy;
         color: var(--mainWhite);
     }
 
 .edit-flashcard {
-    border: 0.2rem solid var(--colour2);
-    color: var(--colour2);
+    border: 0.2rem solid navy;
+    color: navy;
     background: transparent;
 }
 
     .edit-flashcard:hover {
-        background: var(--colour2);
-        color: var(--mainDark);
+        background: navy;
+        color: black;
     }
 
 .delete-flashcard {
-    border: 0.2rem solid var(--colour);
-    color: var(--colour);
+    border: 0.2rem solid orange;
+    color: orange;
     background: transparent;
 }
 
     .delete-flashcard:hover {
-        background: var(--colour);
-        color: var(--mainDark);
+        background: orange;
+        color: black;
     }
 
 .answer {

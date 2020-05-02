@@ -103,7 +103,7 @@
             }, u.enableButtons = c.enableButtons = function (e) {
                 var t = (0, p.getModal)(), n = t.querySelector("button.confirm"), o = t.querySelector("button.cancel");
                 n.disabled = !1, o.disabled = !1
-            }, void 0 !== e ? e.sweetAlert = e.swal = u : (0, f.logStr)("SweetAlert is a frontend module!"), a.exports = r.default
+            }, void 0 !== e ? e.sweetAlert = e.swal = u : (0, f.logStr)("hello"), a.exports = r.default
         }, {
             "./modules/default-params": 2,
             "./modules/handle-click": 3,
@@ -179,7 +179,7 @@
                             var w = o === p, C = (0, r.isDescendant)(o, p);
                             if (!w && !C && y && !n.allowOutsideClick) break;
                             m && b && y ? s(o, n) : b && y || v ? l(o, n) : (0, r.isDescendant)(o, p) && "BUTTON" === p.tagName && sweetAlert.close()
-                    }
+                    }//JavaScript Alert code used - for the scores and times
                 }, handleConfirm: s, handleCancel: l
             }, n.exports = o.default
         }, { "./handle-dom": 4, "./handle-swal-dom": 6, "./utils": 9 }], 4: [function (n, o, a) {
@@ -372,7 +372,7 @@
             }, o.isIE8 = function () {
                 return e.attachEvent && !e.addEventListener
             }, o.logStr = function (t) {
-                void 0 !== e && e.console && e.console.log("SweetAlert: " + t)
+                void 0 !== e && e.console && e.console.log("Alert: " + t)
             }, o.colorLuminance = function (e, t) {
                 (e = String(e).replace(/[^0-9a-f]/gi, "")).length < 6 && (e = e[0] + e[0] + e[1] + e[1] + e[2] + e[2]), t = t || 0;
                 var n, o, a = "#";

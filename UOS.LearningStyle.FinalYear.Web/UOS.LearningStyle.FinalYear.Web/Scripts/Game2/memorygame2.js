@@ -1,21 +1,4 @@
-﻿/**
-* Javascript implementation of "Memory Game"
-* (http://en.wikipedia.org/wiki/Concentration_(game))
-*
-* Uses css3 transitions and transfomations so works in the modern browsers.
-* Currently tested in:
-*
-* Chrome 24
-* Firefox 18
-* Safari 5.1.1
-*
-* MemoryGame.js requires Event.js package, which can be acquired at the following links:
-* Github - https://github.com/mark-rolich/Event.js
-* JS Classes - http://www.jsclasses.org/package/212-JavaScript-Handle-events-in-a-browser-independent-manner.html
-*
-* @author Mark Rolich <mark.rolich@gmail.com>
-*/
-Array.prototype.shuffle = function () {
+﻿Array.prototype.shuffle = function () {
     var temp, j, i;
 
     for (temp, j, i = this.length; i;) {
@@ -40,7 +23,7 @@ Array.prototype.in_array = function (value) {
 
 var Level = function (evt, rows, cols, matches) {
     "use strict";
-
+    //What will be shown on the cards
     var cardsList = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVW[\\]^_`abcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜ',
         playfieldWrapper = document.getElementById('playfield-wrapper'),
         playfield = document.createElement('table'),
@@ -86,7 +69,7 @@ var Level = function (evt, rows, cols, matches) {
                 txt.nodeValue = '\xA0';
 
                 back.appendChild(txt);
-
+                //flip the card
                 flipper.appendChild(back);
                 flipper.appendChild(front);
 
@@ -308,4 +291,4 @@ var MemoryGame = function (evt) {
             start();
         }
     });
-};
+};//Help from a GlA as the cards where not flipping from and back

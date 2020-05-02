@@ -1,34 +1,57 @@
 ﻿
 @{
+    /**/
+
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="bg1"></div>
+<div class="bg1 bg4"></div>
+<div class="bg1 bg5"></div>
+
+
+
 <div class="jumbotron">
-    <h1>Overview of my project</h1>
+    <h1>Learning Styles</h1>
     <p class="lead"></p>
-    <p><a href="" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
 </div>
 
 @if (User.Identity.IsAuthenticated)
 {
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Game 1</h2>
-            <p>
 
-            </p>
-            <p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
+        <div class="card-columns">
+            <div class="col-10">
+                <h2>Visual</h2>
+                <p>
+                    Someone with a Visual learning style has a preference for seen or observed things,
+                    including pictures, diagrams, demonstrations, displays, handouts, films, flip-chart, etc.
+                    From this website you will be able to play memory games and create flash cards to help aid your learning.
+
+                </p>
+
+            </div>
+            <div class="card-columns">
+                <h2>Auditory</h2>
+                <p>
+                    Someone with an Auditory learning style has a preference for the transfer of
+                    information through listening: to the spoken word, of self or others, of sounds and
+                    noises. On this website you'll be able to record yourself and play it back as many times as
+                    you like, as well as downloading it onto your device.
+                </p>
+
+            </div>
+
+            <div class="card-columns">
+                <h2>Organisation</h2>
+                <p>
+                    You'll be able to organise your work with the help of a calender that will store all your activities.
+                    You'll also be able to calculate your overall percentage by inputting your credits and marks of different modules.
+                </p>
+
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Game 2</h2>
-            <p></p>
-            <p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Game 3</h2>
-            <p></p>
-            <p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
-        </div>
-    </div>
-}
+
+
+        }

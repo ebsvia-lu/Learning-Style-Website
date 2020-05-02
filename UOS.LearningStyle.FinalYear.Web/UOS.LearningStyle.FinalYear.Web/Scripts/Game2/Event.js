@@ -1,11 +1,4 @@
-﻿/**
-* Unifies event handling across browsers
-*
-* - Allows registering and unregistering of event handlers
-* - Injects event object and involved DOM element to listener
-*
-* @author Mark Rolich <mark.rolich@gmail.com>
-*/
+﻿//Reference : Stack Overflow - Event Listener
 var Event = function () {
     "use strict";
     this.attach = function (evtName, element, listener, capture) {

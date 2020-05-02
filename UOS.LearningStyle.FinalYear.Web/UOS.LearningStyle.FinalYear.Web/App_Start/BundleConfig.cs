@@ -50,8 +50,9 @@ namespace UOS.LearningStyle.FinalYear.Web
  ));
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/course/bootstrap.css",
-                      "~/Content/course/site.css"
-                
+                      "~/Content/course/site.css",
+                       "~/Content/style.css",
+                       "~/Content/bg.css"
                     ));
 
             bundles.Add(new StyleBundle("~/Contentssss/css").Include(

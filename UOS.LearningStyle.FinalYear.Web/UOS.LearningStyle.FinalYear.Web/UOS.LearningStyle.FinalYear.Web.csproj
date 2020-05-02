@@ -179,6 +179,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bg.css" />
     <Content Include="Content\calendar\bootstrap-grid.css" />
     <Content Include="Content\calendar\bootstrap-grid.min.css" />
     <Content Include="Content\calendar\bootstrap-reboot.css" />
@@ -252,11 +253,11 @@
     <Content Include="Content\course\PagedList.css" />
     <Content Include="Content\course\Site.css" />
     <Content Include="Content\Game1\alert.css" />
-    <Content Include="Content\Game1\fonts.css" />
     <Content Include="Content\Game1\style.css" />
     <Content Include="Content\Game2\memorygame2.css" />
     <Content Include="Content\Game3\Flashcards.css" />
     <Content Include="Content\games\style.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -495,6 +496,7 @@
     <Content Include="Views\Game2\Index.cshtml" />
     <Content Include="Views\Game3\Index.cshtml" />
     <Content Include="Views\Shared\_FlashCard.cshtml" />
+    <Content Include="Views\Shared\_MemoryGame2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
