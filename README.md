@@ -37,7 +37,7 @@ All other files needed are embedded inside the file.
 
 
 ## Authors
-Eboselulu Etiobhio
+Ebe Etiobhio
 
 ## References
 * [Gitlab Markdown Guide](https://docs.gitlab.com/ee/user/markdown.html)
