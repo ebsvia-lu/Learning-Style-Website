@@ -2,6 +2,7 @@
 My project will be based on a Student productivity focused website with several features. 
 Students will have to create a profile.
 It is written in Javascript, HMTL, CSs and C# and makes sure of ASP.NET MVC Pattern
+Microsoft sql server management studio is used to store the database
 The features are:
 
 1 Calendar- Being able to input lectures, meetings and extra curriculum activities into a Calendar and set notification reminders. This will help Students stay organised with commitments.
