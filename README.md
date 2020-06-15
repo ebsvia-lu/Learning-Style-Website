@@ -1,7 +1,7 @@
 # Student Hub Web Application
 My project will be based on a Student productivity focused website with several features. 
 Students will have to create a profile.
-It is written in Javascript, HMTL, CSs and C# and makes sure of ASP.NET MVC Pattern
+It is written in Javascript, HMTL, CSs and C# and makes sure of ASP.NET MVC Pattern.
 Microsoft sql server management studio is used to store the database
 The features are:
 
